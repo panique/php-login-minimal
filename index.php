@@ -1,16 +1,10 @@
 <?php
 
 /**
- * A simple, clean and secure PHP Login Script
- *
- * MINIMAL VERSION
- * (check the website / GitHub for other versions)
+ * A simple, clean and secure PHP Login Script / MINIMAL VERSION
+ * For more versions (one-file, advanced, framework-like) visit http://www.php-login.net
  *
  * Uses PHP SESSIONS, modern password-hashing and salting and gives the basic functions a proper login system needs.
- *
- * Please note: this is just the minimal version of the login script, so if you need a more
- * advanced version, have a look on http://php-login.net/ or https://github.com/panique/php-login.
- * There is also a professional framework-like version with much more features.
  *
  * @author Panique
  * @link https://github.com/panique/php-login-minimal/

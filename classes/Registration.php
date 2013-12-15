@@ -11,26 +11,6 @@ class Registration
      */
     private $db_connection = null;
     /**
-     * @var string $user_name The user's name
-     */
-    private $user_name = "";
-    /**
-     * @var string $user_email The user's mail
-     */
-    private $user_email = "";
-    /**
-     * @var string $user_password The user's password
-     */
-    private $user_password = "";
-    /**
-     * @var string $user_password_hash The user's password hash
-     */
-    private $user_password_hash = "";
-    /**
-     * @var boolean $registration_successful The user's registration success status
-     */
-    public $registration_successful = false;
-    /**
      * @var array $errors Collection of error messages
      */
     public $errors = array();
@@ -41,7 +21,7 @@ class Registration
 
     /**
      * the function "__construct()" automatically starts whenever an object of this class is created,
-     * you know, when you do "$login = new Login();"
+     * you know, when you do "$registration = new Registration();"
      */
     public function __construct()
     {
@@ -51,8 +31,8 @@ class Registration
     }
 
     /**
-     * handles the entire registration process. checks all error possibilities, and creates a new user in the database if
-     * everything is fine
+     * handles the entire registration process. checks all error possibilities
+     * and creates a new user in the database if everything is fine
      */
     private function registerNewUser()
     {
@@ -85,44 +65,43 @@ class Registration
             && !empty($_POST['user_password_repeat'])
             && ($_POST['user_password_new'] === $_POST['user_password_repeat'])
         ) {
-            // creating a database connection
+            // create a database connection
             $this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
             // change character set to utf8 and check it
             if (!$this->db_connection->set_charset("utf8")) {
-                printf("Error loading character set utf8: %s\n", $this->db_connection->error);
+                $this->errors[] = $this->db_connection->error;
             }
 
             // if no connection errors (= working database connection)
             if (!$this->db_connection->connect_errno) {
 
                 // escaping, additionally removing everything that could be (html/javascript-) code
-                $this->user_name = $this->db_connection->real_escape_string(htmlentities($_POST['user_name'], ENT_QUOTES));
-                $this->user_email = $this->db_connection->real_escape_string(htmlentities($_POST['user_email'], ENT_QUOTES));
+                $user_name = $this->db_connection->real_escape_string(strip_tags($_POST['user_name'], ENT_QUOTES));
+                $user_email = $this->db_connection->real_escape_string(strip_tags($_POST['user_email'], ENT_QUOTES));
 
-                $this->user_password = $_POST['user_password_new'];
+                $user_password = $_POST['user_password_new'];
 
-                // crypt the user's password with the PHP 5.5's password_hash() function, results in a 60 character
+                // crypt the user's password with PHP 5.5's password_hash() function, results in a 60 character
                 // hash string. the PASSWORD_DEFAULT constant is defined by the PHP 5.5, or if you are using
                 // PHP 5.3/5.4, by the password hashing compatibility library
-                $this->user_password_hash = password_hash($this->user_password, PASSWORD_DEFAULT);
+                $user_password_hash = password_hash($user_password, PASSWORD_DEFAULT);
 
                 // check if user already exists
-                $sql = "SELECT * FROM users WHERE user_name = '" . $this->user_name . "';";
+                $sql = "SELECT * FROM users WHERE user_name = '" . $user_name . "';";
                 $query_check_user_name = $this->db_connection->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
                     $this->errors[] = "Sorry, that user name is already taken. Please choose another one.";
                 } else {
-                    // write new users data into database
+                    // write new user's data into database
                     $sql = "INSERT INTO users (user_name, user_password_hash, user_email)
-                            VALUES('" . $this->user_name . "', '" . $this->user_password_hash . "', '" . $this->user_email . "');";
+                            VALUES('" . $user_name . "', '" . $user_password_hash . "', '" . $user_email . "');";
                     $query_new_user_insert = $this->db_connection->query($sql);
 
                     // if user has been added successfully
                     if ($query_new_user_insert) {
                         $this->messages[] = "Your account has been created successfully. You can now log in.";
-                        $this->registration_successful = true;
                     } else {
                         $this->errors[] = "Sorry, your registration failed. Please go back and try again.";
                     }
