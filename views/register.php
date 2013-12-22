@@ -1,20 +1,17 @@
-<!-- errors & messages --->
 <?php
-
-// show negative messages
-if ($registration->errors) {
-    foreach ($registration->errors as $error) {
-        echo $error;    
+// show potential errors / feedback (from registration object)
+if (isset($registration)) {
+    if ($registration->errors) {
+        foreach ($registration->errors as $error) {
+            echo $error;
+        }
+    }
+    if ($registration->messages) {
+        foreach ($registration->messages as $message) {
+            echo $message;
+        }
     }
 }
-
-// show positive messages
-if ($registration->messages) {
-    foreach ($registration->messages as $message) {
-        echo $message;
-    }
-}
-
 ?>
 
 <!-- register form -->
