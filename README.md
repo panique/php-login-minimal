@@ -37,7 +37,7 @@ Live demo **[here](http://php-login.net/demo2.html)**, live demo's phpinfo() **[
 - PHP 5.3.7+
 - MySQL 5 database (please use a modern version of MySQL (5.5, 5.6, 5.7 ) as very old versions have a exotic bug that
 [makes PDO injections possible](http://stackoverflow.com/q/134099/1114320).
-- activated mysqli (last letter is an "i") extension (activated by default)
+- activated mysqli (last letter is an "i") extension (activated by default on most server setups)
 
 ## Installation (quick setup)
 
@@ -51,7 +51,7 @@ A very detailed guideline on how to install the script
 
 ## How this script works
 
-TODO: INSTALLATION-GUIDELINE MIT INFOGRAPHICS SCHREIBEN !
+TODO: 
 
 ## Useful links
 
