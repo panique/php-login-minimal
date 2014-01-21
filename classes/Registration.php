@@ -87,12 +87,12 @@ class Registration
                 // PHP 5.3/5.4, by the password hashing compatibility library
                 $user_password_hash = password_hash($user_password, PASSWORD_DEFAULT);
 
-                // check if user already exists
-                $sql = "SELECT * FROM users WHERE user_name = '" . $user_name . "';";
+                // check if user or email address already exists
+                $sql = "SELECT * FROM users WHERE user_name = '" . $user_name . "' OR user_email = '" . $user_email . "';";
                 $query_check_user_name = $this->db_connection->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
-                    $this->errors[] = "Sorry, that user name is already taken. Please choose another one.";
+                    $this->errors[] = "Sorry, that username / email address is already taken.";
                 } else {
                     // write new user's data into database
                     $sql = "INSERT INTO users (user_name, user_password_hash, user_email)
