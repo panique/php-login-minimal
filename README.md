@@ -49,6 +49,12 @@ Change mySQL database user and password in `config/db.php` (*DB_USER* and *DB_PA
 A very detailed guideline on how to install the script
 [here in this blog post](http://www.dev-metal.com/install-php-login-nets-1-minimal-login-script-ubuntu/).
 
+## Security notice
+
+This script comes with a handy .htaccess in the views folder that denies direct access to the files within the folder
+(so that people cannot render the views directly). However, these .htaccess files only work if you have set
+`AllowOverride` to `All` in your apache vhost configs. There are lots of tutorials on the web on how to do this.
+
 ## Useful links
 
 - [A little guideline on how to use the PHP 5.5 password hashing functions and its "library plugin" based PHP 5.3 & 5.4 implementation](http://www.dev-metal.com/use-php-5-5-password-hashing-functions/)
