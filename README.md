@@ -46,9 +46,9 @@ Change mySQL database user and password in `config/db.php` (*DB_USER* and *DB_PA
 
 ## Installation (detailed setup tutorials)
 
-Two very detailed guidelines on
-[How to install the php-login-minimal on Ubuntu 12.04 LTS](http://www.dev-metal.com/install-php-login-nets-1-minimal-login-script-ubuntu/)
-[How to install the php-login-minimal on Windows 7 and 8 (useful for development)](http://www.dev-metal.com/how-to-install-php-login-minimal-on-windows-7-8/)
+- [Detailed tutorial for installation on Ubuntu 12.04 LTS](http://www.dev-metal.com/install-php-login-nets-1-minimal-login-script-ubuntu/)
+
+- [Detailed tutorial for installation on Windows 7 and 8 (useful for development)](http://www.dev-metal.com/how-to-install-php-login-minimal-on-windows-7-8/)
 
 ## Installation (deftai)
 
