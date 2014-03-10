@@ -44,10 +44,10 @@ Live demo **[here](http://php-login.net/demo2.html)**, live demo's phpinfo() **[
 Create a database *login* and the table *users* via the SQL statements in the `_install` folder.
 Change mySQL database user and password in `config/db.php` (*DB_USER* and *DB_PASS*).
 
-## Installation (very detailed setup)
+## Installation (detailed setup tutorials)
 
-A very detailed guideline on how to install the script
-[here in this blog post](http://www.dev-metal.com/install-php-login-nets-1-minimal-login-script-ubuntu/).
+- [Detailed tutorial for installation on Ubuntu 12.04 LTS](http://www.dev-metal.com/install-php-login-nets-1-minimal-login-script-ubuntu/)
+- [Detailed tutorial for installation on Windows 7 and 8 (useful for development)](http://www.dev-metal.com/how-to-install-php-login-minimal-on-windows-7-8/)
 
 ## Security notice
 
