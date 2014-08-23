@@ -12,6 +12,8 @@ See [php-login.net](http://www.php-login.net) for more info.
 
 [![Donate with PayPal banner](http://www.dev-metal.com/donate-with-paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG)
 
+[![Donate with Flattr banner](http://www.dev-metal.com/donate-with-flattr.png)](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fphp-login-minimal)
+
 1. **One-file version:** Full login script in one file. Uses a one-file SQLite database (no MySQL needed) and PDO.
    Features: Register, login, logout.
    https://github.com/panique/php-login-one-file
@@ -82,10 +84,6 @@ Please commit only in *develop* branch. The *master* branch will always contain 
 If you think this script is useful and saves you a lot of work, then think about supporting the project:
 
 1. Rent your next server at [A2 Hosting](http://www.a2hosting.com/4471.html) or [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20).
-2. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG)
-   or [GitTip](https://www.gittip.com/Panique/)
+2. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG),
+[GitTip](https://www.gittip.com/Panique/) or [Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fphp-login-minimal).
 3. Contribute to this project. Feel free to improve this project with your skills.
-
-## Stats
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/panique/php-login-minimal/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
