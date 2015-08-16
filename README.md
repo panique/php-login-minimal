@@ -61,10 +61,6 @@ This script comes with a handy .htaccess in the views folder that denies direct 
 - [Notes on password & hashing salting in upcoming PHP versions (PHP 5.5.x & 5.6 etc.)](https://github.com/panique/php-login/wiki/Notes-on-password-&-hashing-salting-in-upcoming-PHP-versions-%28PHP-5.5.x-&-5.6-etc.%29)
 - [Some basic "benchmarks" of all PHP hash/salt algorithms](https://github.com/panique/php-login/wiki/Which-hashing-&-salting-algorithm-should-be-used-%3F)
 
-## I'm blogging...
-
-at **[DEV METAL](http://www.dev-metal.com)**, mostly about PHP and IT-related stuff.
-
 ## License
 
 Licensed under [MIT](http://www.opensource.org/licenses/mit-license.php). You can use this script for free for any
@@ -78,3 +74,7 @@ Please create a feature-branch if possible when committing to the project, if no
 
 If you think this script is useful and saves you a lot of work, then think about supporting the project by renting
 a server at [HOST1PLUS](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html).
+
+## I'm blogging...
+
+at **[DEV METAL](http://www.dev-metal.com)**, mostly about PHP and IT-related stuff. Have a look if you like.
