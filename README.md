@@ -1,12 +1,14 @@
-# A PHP login script (MINIMAL VERSION)
+# php-login-minimal
 
-A simple, but secure PHP login script. Uses the ultra-modern & future-proof PHP 5.5.
-BLOWFISH hashing/salting functions (includes the official PHP 5.3 & PHP 5.4 compatibility pack, which makes those
-functions available in those versions too). Follow the project on **[Twitter](https://twitter.com/simplephplogin)** or 
-**[Facebook](https://www.facebook.com/pages/PHP-Login-Script/461306677235868)**. Also have a look on my blog if you 
-like (lots of related stuff there): **[Dev Metal](http://www.dev-metal.com)**.
+A simple, but secure PHP login script. Uses the ultra-modern & future-proof PHP 5.5 BLOWFISH hashing/salting functions (includes the official PHP 5.3 & PHP 5.4 compatibility pack, which makes those functions available in these versions too). 
 
-**This script is part of the php-login project, a collection of 4 different login scripts**.
+# Why does this script exist ?
+
+In the PHP world every beginner tries to build login systems from scratch, doing all the typical mistakes, usually going from saving plain text passwords to using (horribly wrong) MD5 hashing. This script tries to give beginners a usable code base with a fully implemented user authentication ("login") system, preventing less-experienced developers at least from the worst security issues.
+
+Please keep in mind that this is just the minimal version, doing the most minimal tasks.
+
+**This script is part of the so called "PHP Login Project", a collection of 4 different login scripts, each one implementing a basic (or not so basic) user authentication system in the way it should be implemented**.
 See [php-login.net](http://www.php-login.net) for more info.
 
 [![Support php-login-minimal](_support/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
@@ -21,10 +23,8 @@ See [php-login.net](http://www.php-login.net) for more info.
    Uses PDO, Captchas, mail sending via SMTP and much more.
    https://github.com/panique/php-login-advanced
 3. **HUGE (professional version)** Everything comes with a professional MVC framework structure, perfect for building
-   real applications. Additional features like: URL rewriting, professional usage of controllers and actions, PDO, MySQL,
-   mail sending via PHPMailer (SMTP or PHP's mail() function/linux sendmail), user profile pages, public user profiles,
-   gravatars and local avatars, account upgrade/downgrade etc., login via Facebook, Composer integration, etc.
-   https://github.com/panique/huge
+   real applications. Additional features like: URL rewriting, professional usage of controllers and actions, PDO, MySQL, mail sending via PHPMailer (SMTP or PHP's mail() function/linux sendmail), user profile pages, public user profiles, gravatars and local avatars, account upgrade/downgrade etc., login via Facebook, Composer integration, etc.
+https://github.com/panique/huge
 
 ## Live-demo
 
@@ -61,11 +61,9 @@ This script comes with a handy .htaccess in the views folder that denies direct 
 - [Notes on password & hashing salting in upcoming PHP versions (PHP 5.5.x & 5.6 etc.)](https://github.com/panique/php-login/wiki/Notes-on-password-&-hashing-salting-in-upcoming-PHP-versions-%28PHP-5.5.x-&-5.6-etc.%29)
 - [Some basic "benchmarks" of all PHP hash/salt algorithms](https://github.com/panique/php-login/wiki/Which-hashing-&-salting-algorithm-should-be-used-%3F)
 
-## Themes / User Interfaces / Styles
+## I'm blogging...
 
-Bookmark the highly related partner-project "[php-login-styles](https://github.com/panique/php-login-styles)" which
-will host beautiful themes for all the php-login versions. Currently this is only a placeholder,
-the project starts in early 2014.
+at **[DEV METAL](http://www.dev-metal.com)**, mostly about PHP and IT-related stuff.
 
 ## License
 
@@ -74,7 +72,7 @@ private or commercial projects.
 
 ## Contribute
 
-Please commit only in *develop* branch. The *master* branch will always contain the stable version.
+Please create a feature-branch if possible when committing to the project, if not then simply commit to master branch.
 
 ## Support
 
