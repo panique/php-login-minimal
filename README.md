@@ -1,6 +1,6 @@
 # php-login-minimal
 
-A simple, but secure PHP login script. Uses the ultra-modern & future-proof PHP 5.5 BLOWFISH hashing/salting functions (includes the official PHP 5.3 & PHP 5.4 compatibility pack, which makes those functions available in these versions too). 
+A simple, but secure PHP login script. Uses the ultra-modern & future-proof PHP 5.5 BLOWFISH hashing/salting functions (includes the official PHP 5.3 & PHP 5.4 compatibility pack, which makes those functions available in these versions too).
 
 ## Why does this script exist ?
 
@@ -24,7 +24,7 @@ https://github.com/panique/php-login-minimal
 Similar to the minimal version, but full of features. Uses PDO, Captchas, mail sending via SMTP and much more.
 https://github.com/panique/php-login-advanced
 
-**HUGE (professional version)** 
+**HUGE (professional version)**
 Quite professional MVC framework structure, useful for real applications. Additional features like: URL rewriting, mail sending via PHPMailer (SMTP or PHP's mail() function/linux sendmail), user profile pages, public user profiles, gravatars and local avatars, account upgrade/downgrade etc., OAuth2, Composer integration, etc.
 https://github.com/panique/huge
 
@@ -76,3 +76,6 @@ a server at [HOST1PLUS](https://affiliates.host1plus.com/ref/devmetal/36f4d828.h
 ## I'm blogging...
 
 at **[DEV METAL](http://www.dev-metal.com)**, mostly about PHP and IT-related stuff. Have a look if you like.
+
+
+#I'm testing...
