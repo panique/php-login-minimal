@@ -7,7 +7,7 @@
  *
  * @author Panique
  * @link https://github.com/panique/php-login-minimal/
- * @license http://opensource.org/licenses/MIT MIT License
+ * @license http://opensource.org/licenses/MIT
  */
 
 // checking for minimum PHP version
