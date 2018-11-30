@@ -88,10 +88,10 @@ class Login
                         $_SESSION['user_login_status'] = 1;
 
                     } else {
-                        $this->errors[] = "Wrong password. Try again.";
+                        $this->errors[] = "The username or password entered is incorrect.  Please try again.";
                     }
                 } else {
-                    $this->errors[] = "This user does not exist.";
+                    $this->errors[] = "The username or password entered is incorrect.  Please try again.";
                 }
             } else {
                 $this->errors[] = "Database connection problem.";
