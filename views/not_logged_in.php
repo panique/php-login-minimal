@@ -29,5 +29,5 @@ if (isset($login)) {
     <input type="submit"  name="login" value="Log in" />
 
 </form>
-
+<script src='https://www.google.com/recaptcha/api.js?hl=en-GB'></script>
 <a href="register.php">Register new account</a>
