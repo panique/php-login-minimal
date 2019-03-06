@@ -40,6 +40,9 @@ class Registration
             $this->errors[] = "Empty Username";
         } elseif (empty($_POST['user_password_new']) || empty($_POST['user_password_repeat'])) {
             $this->errors[] = "Empty Password";
+        elseif (empty($_POST['g-recaptcha-response']) || $_POST['g-recaptcha-response'] == null) {
+            $this->errors[] = "Please try again.";
+        }
         } elseif ($_POST['user_password_new'] !== $_POST['user_password_repeat']) {
             $this->errors[] = "Password and password repeat are not the same";
         } elseif (strlen($_POST['user_password_new']) < 6) {

@@ -1,4 +1,8 @@
 <?php
+require_once "recaptchalib.php";
+$secret = "";
+$response = null;
+$reCaptcha = new ReCaptcha($secret);
 // show potential errors / feedback (from registration object)
 if (isset($registration)) {
     if ($registration->errors) {
@@ -30,9 +34,10 @@ if (isset($registration)) {
 
     <label for="login_input_password_repeat">Repeat password</label>
     <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
+        <div class="g-recaptcha" style="margin-top:13px;" data-sitekey="KEY_PUBLIC"></div>
     <input type="submit"  name="register" value="Register" />
 
 </form>
-
+<script src='https://www.google.com/recaptcha/api.js?hl=en-GB'></script>
 <!-- backlink -->
 <a href="index.php">Back to Login Page</a>
