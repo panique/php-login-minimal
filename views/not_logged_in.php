@@ -22,7 +22,7 @@ if (isset($login)) {
 
     <label for="login_input_password">Password</label>
     <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" required />
-
+    <div class="g-recaptcha" style="margin-top:13px;" data-sitekey="KEY_PUBLIC"></div>
     <input type="submit"  name="login" value="Log in" />
 
 </form>
