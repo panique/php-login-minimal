@@ -49,6 +49,8 @@ class Login
             $this->errors[] = "Username field was empty.";
         } elseif (empty($_POST['user_password'])) {
             $this->errors[] = "Password field was empty.";
+        } elseif (empty($_POST['g-recaptcha-response']) || $_POST['g-recaptcha-response'] == null) {
+            $this->errors[] = "Please try again.";
         } elseif (!empty($_POST['user_name']) && !empty($_POST['user_password'])) {
 
             // create a database connection, using the constants from config/db.php (which we loaded in index.php)
